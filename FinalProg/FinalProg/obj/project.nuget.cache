@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PiOHj0j0aU1YCEBDeECA2ouUgT+NQETMSOreRlhArhhoijPG2KQptDyeP7y4rFNAkXftMKCZbjBT+F3oFFYUYw==",
+  "dgSpecHash": "G0+5qcPnChQ9oVYF9l5EQwRrjF17L56CCoqfLcX9UyPy0gKgiEM5/s6ygvciHJd8xtqk7uz3upTTR/4gcdLdrA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Alex\\prog III\\FinalProg\\FinalProg\\FinalProg.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\repojava\\Final-ProgIII\\FinalProg\\FinalProg\\FinalProg.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",

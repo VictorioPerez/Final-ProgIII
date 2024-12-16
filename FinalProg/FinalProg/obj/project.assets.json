@@ -5190,11 +5190,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Alex\\prog III\\FinalProg\\FinalProg\\FinalProg.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\repojava\\Final-ProgIII\\FinalProg\\FinalProg\\FinalProg.csproj",
       "projectName": "FinalProg",
-      "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Alex\\prog III\\FinalProg\\FinalProg\\FinalProg.csproj",
+      "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\repojava\\Final-ProgIII\\FinalProg\\FinalProg\\FinalProg.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Alex\\prog III\\FinalProg\\FinalProg\\obj\\",
+      "outputPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\repojava\\Final-ProgIII\\FinalProg\\FinalProg\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
