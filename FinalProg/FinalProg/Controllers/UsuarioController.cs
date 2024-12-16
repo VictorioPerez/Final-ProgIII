@@ -14,7 +14,7 @@ namespace FinalProg.Controllers
             _userService = userService;
         }
 
-        [HttpGet("login")]
+        [HttpPost("login")]
         public async Task<IActionResult> Login([FromQuery] string email, [FromQuery] string password)
         {
             return await _userService.Login(email, password);
