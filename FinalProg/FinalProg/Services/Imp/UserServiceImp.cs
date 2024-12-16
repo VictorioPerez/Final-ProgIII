@@ -24,7 +24,7 @@ namespace FinalProg.Services.Imp
                 throw new ExceptionBadRequestClient("El formato de userId no es válido. Debe ser un GUID.");
             }
 
-            var usuario = await _context.Usuarios.FirstOrDefaultAsync(x => x.Id == guidId);
+            var usuario = await _context.Usuarios.Include(x => x.Rol).FirstOrDefaultAsync(x => x.Id == guidId);
 
             if (usuario == null)
             {
@@ -43,7 +43,7 @@ namespace FinalProg.Services.Imp
             var usuario = await _context.Usuarios.Include(x => x.Tokens)
                 .FirstOrDefaultAsync(u => u.Email == email);
 
-            if (usuario == null)
+            if (usuario == null || !usuario.Activo)
             {
                 throw new KeyNotFoundException("Usuario no encontrado");
             }
