@@ -40,7 +40,7 @@ namespace FinalProg.Services.Imp
                 throw new ExceptionBadRequestClient("Email y contraseña son requeridos");
             }
 
-            var usuario = await _context.Usuarios
+            var usuario = await _context.Usuarios.Include(x => x.Tokens)
                 .FirstOrDefaultAsync(u => u.Email == email);
 
             if (usuario == null)
@@ -53,19 +53,37 @@ namespace FinalProg.Services.Imp
                 throw new UnauthorizedAccessException("Contraseña incorrecta");
             }
 
-            string token = GenerarTokenUnico();
-
-            var usuarioToken = new TokenXUsuario
+            var usuarioToken = new TokenXUsuario();
+            if (usuario.Tokens == null || usuario.Tokens.Count <= 0)
             {
-                IdUsuario = usuario.Id,
-                Token = token,
-                DateTimeValid = DateTime.UtcNow.AddMinutes(15)
-            };
+
+                string token = GenerarTokenUnico();
+
+                usuarioToken = new TokenXUsuario
+                {
+                    IdUsuario = usuario.Id,
+                    Token = token,
+                    DateTimeValid = DateTime.UtcNow.AddMinutes(15)
+                };
+            }
+            else
+            {
+                usuario.Tokens.Clear();
+
+                string token = GenerarTokenUnico();
+
+                usuarioToken = new TokenXUsuario
+                {
+                    IdUsuario = usuario.Id,
+                    Token = token,
+                    DateTimeValid = DateTime.UtcNow.AddMinutes(15)
+                };
+            }
 
             _context.TokensXUsuario.Add(usuarioToken);
             await _context.SaveChangesAsync();
 
-            return token;
+            return usuarioToken.Token;
         }
 
         public async Task<UserDTO> Register(UserRequest request)
