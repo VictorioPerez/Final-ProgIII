@@ -15,8 +15,10 @@ namespace FinalProg.Services.Imp
             _context = context;
         }
 
-        public async Task<UserDTO> GetById(string userId)
+        public async Task<UserDTO> GetById(string userId, string token)
         {
+            await ValidarToken(token);
+
             if (!Guid.TryParse(userId, out Guid guidId))
             {
                 throw new ExceptionBadRequestClient("El formato de userId no es válido. Debe ser un GUID.");
@@ -113,6 +115,27 @@ namespace FinalProg.Services.Imp
         private bool VerificarContrasena(string contrasenaIngresada, string contrasenaAlmacenada)
         {
             return contrasenaIngresada == contrasenaAlmacenada;
+        }
+
+        public async Task ValidarToken(string token)
+        {
+            if (string.IsNullOrWhiteSpace(token))
+            {
+                throw new UnauthorizedAccessException("Token no proporcionado");
+            }
+
+            var tokenRegistrado = await _context.TokensXUsuario
+                .FirstOrDefaultAsync(t => t.Token == token);
+
+            if (tokenRegistrado == null)
+            {
+                throw new UnauthorizedAccessException("Token inválido");
+            }
+
+            if (tokenRegistrado.DateTimeValid < DateTime.UtcNow)
+            {
+                throw new UnauthorizedAccessException("Token expirado");
+            }
         }
     }
 }

@@ -22,9 +22,14 @@ namespace FinalProg.Controllers
         }
 
         [HttpGet("getById/{userId}")]
-        public async Task<IActionResult> getById([FromRoute] string userId)
+        public async Task<IActionResult> getById([FromHeader(Name = "Authorization")] string token, [FromRoute] string userId)
         {
-            return Ok(await _userService.GetById(userId));
+            if (token != null && token.StartsWith("Bearer "))
+            {
+                token = token.Substring(7);
+            }
+
+            return Ok(await _userService.GetById(userId, token));
         }
 
         [HttpPost("register")]
