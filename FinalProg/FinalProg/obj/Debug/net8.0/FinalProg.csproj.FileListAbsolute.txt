@@ -166,7 +166,4 @@ C:\Users\Usuario\OneDrive\Escritorio\Alex\prog III\FinalProg\FinalProg\bin\Debug
 C:\Users\Usuario\OneDrive\Escritorio\Alex\prog III\FinalProg\FinalProg\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Usuario\OneDrive\Escritorio\Alex\prog III\FinalProg\FinalProg\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\Usuario\OneDrive\Escritorio\Alex\prog III\FinalProg\FinalProg\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-C:\Users\Usuario\OneDrive\Escritorio\Alex\prog III\FinalProg\FinalProg\bin\Debug\net8.0\FinalProg.staticwebassets.endpoints.json
-C:\Users\Usuario\OneDrive\Escritorio\Alex\prog III\FinalProg\FinalProg\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\Usuario\OneDrive\Escritorio\Alex\prog III\FinalProg\FinalProg\obj\Debug\net8.0\staticwebassets\msbuild.FinalProg.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Users\Usuario\OneDrive\Escritorio\Alex\prog III\FinalProg\FinalProg\obj\Debug\net8.0\FinalProg.csproj.Up2Date
+C:\Users\Usuario\OneDrive\Escritorio\Alex\prog III\FinalProg\FinalProg\obj\Debug\net8.0\FinalProg.csproj.CopyComplete

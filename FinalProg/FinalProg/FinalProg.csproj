@@ -24,9 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
     <Folder Include="Migrations\" />
-    <Folder Include="Services\" />
     <Folder Include="DTOs\" />
   </ItemGroup>
 
