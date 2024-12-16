@@ -1,4 +1,4 @@
-@FinalProg_HostAddress = http://localhost:5053
+@FinalProg_HostAddress = http://localhost:5008
 
 GET {{FinalProg_HostAddress}}/weatherforecast/
 Accept: application/json
