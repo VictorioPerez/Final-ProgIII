@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "IXl6XhNGXyndaeLGqNqeYTu91eO2AWGl7qckT4/Okm0=",
+  "Hash": "ta2qJ4O3aiE96YfYk44n6pGGOfFWdgTqUXPj/ZhiptM=",
   "Source": "FinalProg",
   "BasePath": "_content/FinalProg",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }
