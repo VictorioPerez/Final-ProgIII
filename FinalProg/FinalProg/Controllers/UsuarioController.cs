@@ -1,11 +1,12 @@
-﻿using FinalProg.Services;
+﻿using FinalProg.DTOs;
+using FinalProg.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FinalProg.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class UsuarioController
+    public class UsuarioController : Controller
     {
         private IUserService _userService;
 
@@ -17,7 +18,22 @@ namespace FinalProg.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromQuery] string email, [FromQuery] string password)
         {
-            return await _userService.Login(email, password);
+            return Ok(await _userService.Login(email, password));
+        }
+
+        [HttpGet("getById/{userId}")]
+        public async Task<IActionResult> getById([FromRoute] string userId)
+        {
+            return Ok(await _userService.GetById(userId));
+        }
+
+        [HttpPost("register")]
+        public async Task<IActionResult> create([FromBody] UserRequest request)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            return Ok(await _userService.Register(request));
         }
     }
 }
